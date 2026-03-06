@@ -1,0 +1,93 @@
+{
+  "info": {
+    "name": "Jitterbit Order API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Order",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"numeroPedido\": \"v10089015vdb-01\",\n  \"valorTotal\": 10000,\n  \"dataCriacao\": \"2023-07-19T12:24:11.5299601+00:00\",\n  \"items\": [\n    {\n      \"idItem\": \"2434\",\n      \"quantidadeItem\": 1,\n      \"valorItem\": 1000\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/order",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["order"]
+        }
+      }
+    },
+    {
+      "name": "Get Order By ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/order/v10089015vdb-01",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["order", "v10089015vdb-01"]
+        }
+      }
+    },
+    {
+      "name": "List Orders",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/order/list",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["order", "list"]
+        }
+      }
+    },
+    {
+      "name": "Update Order",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"numeroPedido\": \"v10089015vdb-01\",\n  \"valorTotal\": 15000,\n  \"dataCriacao\": \"2023-07-19T12:24:11.5299601+00:00\",\n  \"items\": [\n    {\n      \"idItem\": \"2434\",\n      \"quantidadeItem\": 2,\n      \"valorItem\": 1000\n    },\n    {\n      \"idItem\": \"9999\",\n      \"quantidadeItem\": 1,\n      \"valorItem\": 13000\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/order/v10089015vdb-01",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["order", "v10089015vdb-01"]
+        }
+      }
+    },
+    {
+      "name": "Delete Order",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:3000/order/v10089015vdb-01",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["order", "v10089015vdb-01"]
+        }
+      }
+    }
+  ]
+}
