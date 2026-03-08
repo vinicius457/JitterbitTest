@@ -20,6 +20,7 @@ API REST desenvolvida em **Node.js + Express + PostgreSQL + Sequelize** para o d
 - PostgreSQL
 - Sequelize
 - Nodemon
+- Docker(Para fins de testes)
 
 ## Estrutura do projeto
 
